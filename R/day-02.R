@@ -11,4 +11,16 @@ passwords %>%
                            TRUE ~ FALSE)) %>% 
   summarise(sum = sum(check == TRUE))
 
-         
+passwords %>% 
+  extract(col = policy, 
+          into = c("min", "max", "letter", "password"), 
+          regex = "(\\d+)-(\\d+) (.): (.*)", convert = T) %>% 
+  mutate(check2 = map2(password, letter, str_locate_all)) %>%view()
+  hoist(., .col = start, "check2") %>% view()
+# , 
+         # check3 = map2_lgl(min, check2, .x %in% .y))
+
+
+me <- "abddbbbbeb"
+
+str_locate_all(me, "b") %>% simplify() [[1]][,1]
