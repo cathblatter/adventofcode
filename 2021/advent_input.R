@@ -1,5 +1,9 @@
 
 #' Get aoc_input for a given day
+#' 
+#' @source : credits for this fun to David Robinson https://github.com/dgrtwo who posted it
+#' on R4DS channel
+#' 
 #'
 #' @param day 
 #' @param year 
