@@ -1,12 +1,12 @@
-# get input
-source("advent_input.R")
-
 # load pkgs
 library(tidyverse)
 
-
-# solve problem
+# get input
+source("advent_input.R")
 input <- advent_input(day = 1, year = 2022)
+
+split(input, cumsum(is.na(input)))
+
 
 # part 1
 input %>% 
