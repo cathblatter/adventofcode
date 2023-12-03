@@ -13,7 +13,7 @@
 #'
 #' @examples
 advent_input <- function(day = lubridate::day(Sys.Date()),
-                         year = 2021) {
+                         year = 2023) {
   session <- Sys.getenv("ADVENT_SESSION")
   if (session == "") {
     stop("Must set ADVENT_SESSION in .Renviron")
